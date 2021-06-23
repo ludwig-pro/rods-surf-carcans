@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { Link } from 'gatsby';
 
 function Header() {
   return (
@@ -14,9 +15,11 @@ function Header() {
                   <span className="sr-only">Surf</span>
                   {/* // added */}
                   <div className="h-8  sm:h-10  flex justify-center items-center">
-                    <span className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-                      {`<logo rod's surf>`}
-                    </span>
+                    <Link to="/">
+                      <span className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                        {`<logo rod's surf>`}
+                      </span>
+                    </Link>
                   </div>
                   {/* <img
                     className="h-8 w-auto sm:h-10"
@@ -32,9 +35,13 @@ function Header() {
                 </Popover.Button>
               </div>
               <Popover.Group as="nav" className="hidden md:flex space-x-10">
-                <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                <Link
+                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                  to="/shape"
+                >
                   Shape
-                </a>
+                </Link>
+
                 <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
                   School
                 </a>
@@ -76,12 +83,12 @@ function Header() {
                   </div>
                   <div className="py-6 px-5">
                     <div className="grid grid-cols-2 gap-4">
-                      <a
-                        href="#"
-                        className="text-base font-medium text-gray-900 hover:text-gray-700"
+                      <Link
+                        className="text-base font-medium text-gray-500 hover:text-gray-900"
+                        to="/shape"
                       >
                         Shape
-                      </a>
+                      </Link>
                       <a
                         href="#"
                         className="text-base font-medium text-gray-900 hover:text-gray-700"
