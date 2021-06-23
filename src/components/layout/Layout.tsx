@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from './Footer';
-import Header from './Header';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 import { Helmet } from 'react-helmet';
 
 const Layout = ({ children }) => {
@@ -10,8 +10,10 @@ const Layout = ({ children }) => {
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Helmet>
       <Header />
-      <main className="text-gray-900">{children}</main>
-      <Footer />
+      <div className="bg-white">
+        <main>{children}</main>
+        <Footer />
+      </div>
     </>
   );
 };
