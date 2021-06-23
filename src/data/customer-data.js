@@ -52,30 +52,6 @@ export const FEATURES = [
       'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
     icon: ShoppingCartIcon,
   },
-  {
-    name: 'SHORTS',
-    description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ShoppingCartIcon,
-  },
-  {
-    name: 'SKATE',
-    description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ShoppingCartIcon,
-  },
-  {
-    name: 'CLOTHING',
-    description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ShoppingCartIcon,
-  },
-  {
-    name: 'WAKEBOARD',
-    description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ShoppingCartIcon,
-  },
 ];
 
 export const FOOTER_NAVIGATION = {

@@ -3,7 +3,9 @@ import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { FEATURES, FOOTER_NAVIGATION } from '../data/customer-data';
 import GradiantButton from '../components/GradiantButton';
-import Contact from '../components/contact/Contact';
+import Contact from '../components/Contact/Contact';
+import Restaurant from '../components/Restaurant/Restaurant';
+import Footer from '../components/Footer/Footer';
 
 export default function Example() {
   return (
@@ -134,13 +136,13 @@ export default function Example() {
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                     <a
                       href="#"
-                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-500 bg-white hover:bg-blue-50 sm:px-8"
+                      className="flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-500 bg-white hover:bg-blue-50 sm:px-8"
                     >
                       Book online
                     </a>
                     <a
                       href="#"
-                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+                      className="flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
                     >
                       Shape a board
                     </a>
@@ -260,7 +262,7 @@ export default function Example() {
                 <div key={feature.name}>
                   <div>
                     <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
-                      <feature.icon className="h-6 w-6 text-indigo-700" aria-hidden="true" />
+                      <feature.icon className="h-6 w-6 text-teal-700" aria-hidden="true" />
                     </span>
                   </div>
                   <div className="mt-6">
@@ -270,166 +272,22 @@ export default function Example() {
                 </div>
               ))}
             </div>
+            <div className="mt-6 ">
+              <div className="h-6 border-t border-gray-200" />
+              <div className="flex justify-end">
+                <GradiantButton text="learn to surf" />
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Stats section */}
-        <div className="relative bg-gray-900">
-          <div className="h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full">
-            <div className="h-full w-full xl:grid xl:grid-cols-2">
-              <div className="h-full xl:relative xl:col-start-2">
-                <img
-                  className="h-full w-full object-cover opacity-25 xl:absolute xl:inset-0"
-                  src="https://images.unsplash.com/photo-1575623811814-dfbb2c13e4ad?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3750&q=80&sat=-100"
-                  alt="People working on laptops"
-                />
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-gray-900 xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
-            <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
-              <h2 className="text-sm font-semibold tracking-wide uppercase">
-                <span className="bg-gradient-to-r from-purple-300 to-indigo-300 bg-clip-text text-transparent">
-                  Rod's restaurant
-                </span>
-              </h2>
-              <p className="mt-3 text-3xl font-extrabold text-white">
-                Treat yourself after a surf session
-              </p>
-              <p className="mt-5 text-lg text-gray-300">
-                Rhoncus sagittis risus arcu erat lectus bibendum. Ut in adipiscing quis in viverra
-                tristique sem. Ornare feugiat viverra eleifend fusce orci in quis amet. Sit in et
-                vitae tortor, massa. Dapibus laoreet amet lacus nibh integer quis. Eu vulputate diam
-                sit tellus quis at.
-              </p>
-            </div>
-          </div>
-        </div>
+        <Restaurant />
 
         {/* Contact Section */}
-
         <Contact />
       </main>
-
-      <footer className="bg-gray-50" aria-labelledby="footerHeading">
-        <h2 id="footerHeading" className="sr-only">
-          Footer
-        </h2>
-        <div className="max-w-7xl mx-auto pt-16 pb-8 px-4 sm:px-6 lg:pt-24 lg:px-8">
-          <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-            <div className="grid grid-cols-2 gap-8 xl:col-span-2">
-              <div className="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                    Shape
-                  </h3>
-                  <ul className="mt-4 space-y-4">
-                    {FOOTER_NAVIGATION.shape.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-12 md:mt-0">
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                    School
-                  </h3>
-                  <ul className="mt-4 space-y-4">
-                    {FOOTER_NAVIGATION.school.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div className="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                    Shop
-                  </h3>
-                  <ul className="mt-4 space-y-4">
-                    {FOOTER_NAVIGATION.shop.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-12 md:mt-0">
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                    Compagny
-                  </h3>
-                  <ul className="mt-4 space-y-4">
-                    {FOOTER_NAVIGATION.compagny.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="mt-12 xl:mt-0">
-              <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                Subscribe to our newsletter
-              </h3>
-              <p className="mt-4 text-base text-gray-500">
-                The latest news, articles, and resources, sent to your inbox weekly.
-              </p>
-              <form className="mt-4 sm:flex sm:max-w-md">
-                <label htmlFor="emailAddress" className="sr-only">
-                  Email address
-                </label>
-                <input
-                  type="email"
-                  name="emailAddress"
-                  id="emailAddress"
-                  autoComplete="email"
-                  required
-                  className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:placeholder-gray-400"
-                  placeholder="Enter your email"
-                />
-                <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                  <button
-                    type="submit"
-                    className="w-full flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
-                  >
-                    Subscribe
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <div className="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
-            <div className="flex space-x-6 md:order-2">
-              {FOOTER_NAVIGATION.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
-              ))}
-            </div>
-            <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-              &copy; 2021 Rod's, Inc. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
