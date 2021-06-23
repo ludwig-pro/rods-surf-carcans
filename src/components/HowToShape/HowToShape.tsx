@@ -25,21 +25,21 @@ const transferFeatures = [
 
 const communicationFeatures = [
   {
-    id: 1,
+    id: 3,
     name: 'Pre-shape',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: AnnotationIcon,
   },
   {
-    id: 2,
+    id: 4,
     name: 'Handshape',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: MailIcon,
   },
   {
-    id: 3,
+    id: 5,
     name: 'Glassing',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
@@ -106,8 +106,8 @@ export default function Example() {
               {transferFeatures.map((item) => (
                 <div key={item.id} className="relative">
                   <dt>
-                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                      <item.icon className="h-6 w-6" aria-hidden="true" />
+                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 text-white">
+                      <p className="h-6 w-6 text-center" aria-hidden="true">{`${item.id}`}</p>
                     </div>
                     <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{item.name}</p>
                   </dt>
@@ -200,8 +200,8 @@ export default function Example() {
                 {communicationFeatures.map((item) => (
                   <div key={item.id} className="relative">
                     <dt>
-                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                        <item.icon className="h-6 w-6" aria-hidden="true" />
+                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 text-white">
+                        <p className="h-6 w-6 text-center" aria-hidden="true">{`${item.id}`}</p>
                       </div>
                       <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
                         {item.name}
