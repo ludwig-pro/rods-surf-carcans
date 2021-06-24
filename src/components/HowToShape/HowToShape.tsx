@@ -5,6 +5,7 @@ import {
   MailIcon,
   ScaleIcon,
 } from '@heroicons/react/outline';
+import React from 'react';
 
 const transferFeatures = [
   {
