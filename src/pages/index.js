@@ -3,9 +3,9 @@ import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { FEATURES } from '../data/customer-data';
 import GradiantButton from '../components/GradiantButton';
-import Contact from '../components/Contact/Contact';
 import Restaurant from '../components/Restaurant/Restaurant';
 import Layout from '../components/layout/Layout';
+import Contact from '../components/Contact/Contact';
 
 export default function Example() {
   return (

@@ -3,8 +3,9 @@ module.exports = {
     {
       resolve: `gatsby-theme-codebushi`,
       options: {
-        tailwindConfig: `tailwind.config.js`
-      }
-    }
-  ]
+        tailwindConfig: `tailwind.config.js`,
+      },
+    },
+    'gatsby-plugin-eslint',
+  ],
 };
